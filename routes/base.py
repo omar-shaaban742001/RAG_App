@@ -14,6 +14,6 @@ async def welcome():
     app_version = os.getenv("APP_VERSION")
 
     return {
-        "App Name: {app_name}",
-        "App Verison: {app_version}"
+        f"App Name: {app_name}",
+        f"App Verison: {app_version}"
     }
