@@ -8,11 +8,11 @@ services:
       - "27007:27017"
     
     volumes:
-      - D:/mongodb:/data/db
+      - mongodb:/data/db
 
     environment:
-      - "MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME}"
-      - "MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}"
+      - "MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}"
+      - "MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_USERNAME}"
     
     networks:
       - backend
@@ -23,4 +23,4 @@ networks:
   backend:
 
 volumes:
-  D:/mongodb
+  mongodb:
